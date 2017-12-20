@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jung ji hyuk">
+    <meta name="description" content="Welcome to my kakao Clone">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model</title>
+    <style>
+      .box{
+        background-color: red;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        flex-wrap: wrap-reverse;
+      }
+      .box2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        color: white;
+      }
+      .submit{
+        background-color: red;
+      }
+      input[type="submit"]{
+        background-color: yellow;
+      }
+      input{
+        border: 1px solid blue;
+      }
+      .box4{
+        background-color: pink;
+        font-size: 30px;
+        transition: transform 0.5s ease-in-out;
+
+      }
+      .box4:hover{
+        background-color: green;
+        font-size: 40px;
+      }
+      .box4:focus{
+        background-color: blue;
+      }
+      .box5{
+        background-color: black;
+        color:white;
+        transition:all 5s ease-in-out;
+
+      }
+      .box5:hover{
+        background-color: purple;
+        color: green;
+      }
+      .box6{
+        background-color: skyblue;
+        width:200px;
+        height: 200px;
+        transition: transform .5s ease-in-out;
+      }
+      .box6:hover{
+        transform: rotate(3turn) scale(.5, .5);
+      }
+
+      .box7{
+        width:200px;
+        height: 200px;
+        background-color: gray;
+        animation: 2s scaleAndRotateSquare infinite ease-in-out;
+      }
+      @keyframes scaleAndRotateSquare {
+        0%{
+          transform: none;
+        }
+        50%{
+          transform: rotate(3turn) scale(.5, .5);
+          color:blue;
+        }
+        100%{
+          transform: none;
+        }
+      }
+      @media screen and (min-width:320px) and (max-width:700px){
+        body{
+            background-color:blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <div class="box">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+        <div class="box2">3</div>
+        <div class="box2">4</div>
+        <div class="box2">5</div>
+        <div class="box2">6</div>
+        <div class="box2">7</div>
+        <div class="box2">8</div>
+        <div class="box2">9</div>
+      </div>
+      <div class="container">
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3">
+          <input type="password">
+          <input type="submit" class="submit">
+        </div>
+      </div>
+      <span class="box4">lalalal</span>
+      <textarea class="box4">ddddddd</textarea>
+      <span class="box5">text</span>
+      <div class="box6"></div>
+      <div class="box7"></div>
+  </body>
+</html>
