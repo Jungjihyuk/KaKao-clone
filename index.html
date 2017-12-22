@@ -1,123 +1,94 @@
-<!DOCTYPE>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Jung ji hyuk">
-    <meta name="description" content="Welcome to my kakao Clone">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Box Model</title>
-    <style>
-      .box{
-        background-color: red;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        height: 100%;
-        flex-wrap: wrap-reverse;
-      }
-      .box2{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: green;
-        width: 200px;
-        height: 200px;
-        border: 2px solid black;
-        color: white;
-      }
-      .submit{
-        background-color: red;
-      }
-      input[type="submit"]{
-        background-color: yellow;
-      }
-      input{
-        border: 1px solid blue;
-      }
-      .box4{
-        background-color: pink;
-        font-size: 30px;
-        transition: transform 0.5s ease-in-out;
-
-      }
-      .box4:hover{
-        background-color: green;
-        font-size: 40px;
-      }
-      .box4:focus{
-        background-color: blue;
-      }
-      .box5{
-        background-color: black;
-        color:white;
-        transition:all 5s ease-in-out;
-
-      }
-      .box5:hover{
-        background-color: purple;
-        color: green;
-      }
-      .box6{
-        background-color: skyblue;
-        width:200px;
-        height: 200px;
-        transition: transform .5s ease-in-out;
-      }
-      .box6:hover{
-        transform: rotate(3turn) scale(.5, .5);
-      }
-
-      .box7{
-        width:200px;
-        height: 200px;
-        background-color: gray;
-        animation: 2s scaleAndRotateSquare infinite ease-in-out;
-      }
-      @keyframes scaleAndRotateSquare {
-        0%{
-          transform: none;
-        }
-        50%{
-          transform: rotate(3turn) scale(.5, .5);
-          color:blue;
-        }
-        100%{
-          transform: none;
-        }
-      }
-      @media screen and (min-width:320px) and (max-width:700px){
-        body{
-            background-color:blue;
-        }
-      }
-    </style>
-  </head>
-  <body>
-      <div class="box">
-        <div class="box2">1</div>
-        <div class="box2">2</div>
-        <div class="box2">3</div>
-        <div class="box2">4</div>
-        <div class="box2">5</div>
-        <div class="box2">6</div>
-        <div class="box2">7</div>
-        <div class="box2">8</div>
-        <div class="box2">9</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Friends</title>
+</head>
+<body>
+  <header>
+    <div class="header__top">
+      <div class="header__column">
+        <i class="fa fa-plane" aria-hidden="true"></i>
+        <i class="fa fa-wifi"></i>
       </div>
-      <div class="container">
-        <div class="box3"></div>
-        <div class="box3"></div>
-        <div class="box3">
-          <input type="password">
-          <input type="submit" class="submit">
+      <div class="header__column">
+        <span class="header__time">21:46</span>
+      </div>
+      <div class="header__column">
+        <i class="fa fa-moon-o"></i>
+        <i class="fa fa-bluetooth"></i>
+        <span class="header__battery">99%<i class="fa fa-battery-full"></i></span>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__column">
+        <span class="header__text">Manage</span>
+      </div>
+      <div class="header__column">
+        <span class="header__text">Friends<span class="header__nmber">1</span></span>
+      </div>
+      <div class="header__column">
+        <i class="fa fa-cog"></i>
+      </div>
+    </div>
+  </header>
+  <main class="Friends">
+    <div class="search-bar">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Find friends, chats, Plus Friends">
+    </div>
+    <section class="friends__section">
+      <header class="friends__section-header">
+        <h6 class="friends__section-title">My Profile</h6>
+      </header>
+      <div class="friends__section-rows">
+        <div class="friends__section-row">
+          <img src="" alt="">
+          <span class="friends__section-name">정지혁</span>
         </div>
       </div>
-      <span class="box4">lalalal</span>
-      <textarea class="box4">ddddddd</textarea>
-      <span class="box5">text</span>
-      <div class="box6"></div>
-      <div class="box7"></div>
-  </body>
+      <div class="friends__section-row">
+        <img src="" alt="">
+        <span class="friends__profiles-name">Friends'Names Display</span>
+      </div>
+    </section>
+    <section class="friends__section">
+      <header class="friends__section-header">
+        <h6 class="friends__section-title">Friends</h6>
+      </header>
+      <div class="friends__section-rows">
+        <div class="friends__section-row">
+          <div class="friends-sectino-column">
+            <img src="" alt="">
+            <span class="friends__section-name">재민이형</span>
+          </div>
+          <span class="freinds__section-tagline">
+            Life is short. So live your life.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav class="tab-bar">
+    <a href="index.html" class="tab-bar__tab tab-bar__tab--selected">
+      <i class="fa fa-user"></i>
+      <span class="tab-bar__titile">Friends</span>
+    </a>
+    <a href="chats.html" class="tab-bar__tab">
+      <i class="fa fa-comment"></i>
+      <span class="tab-bar__titile">Chats</span>
+    </a>
+    <a href="find.html" class="tab-bar__tab">
+      <i class="fa fa-search"></i>
+      <span class="tab-bar__titile">Find</span>
+    </a>
+    <a href="more.html" class="tab-bar__tab">
+      <i class="fa fa-ellipsis-h"></i>
+       <span class="tab-bar__titile">More</span>
+    </a>
+  </nav>
+</body>
 </html>
