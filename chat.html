@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Chat</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
+<body class="body-chat">
+  <header class="top-header chat-header">
     <div class="header__top">
       <div class="header__column">
-        <i class="fa fa-plane" aria-hidden="true"></i>
+        <i class="fa fa-plane"></i>
         <i class="fa fa-wifi"></i>
       </div>
       <div class="header__column">
@@ -25,7 +26,7 @@
     </div>
     <div class="header__bottom">
       <div class="header__column">
-        <i class="fa fa-chevron-left fa-lg"></i>
+        <a href="chats.html"><i class="fa fa-chevron-left fa-lg"></i></a>
       </div>
       <div class="header__column">
         <span class="header__text">Chat</span>
@@ -58,18 +59,33 @@
       </div>
       <span class="chat__message-time">15:30</span>
     </div>
-    <div class="type__message">
-      <i class="fa fa-plus fa-2x"></i>
-      <div class="type__message-input">
-        <input type="text">
-        <i class="fa fa-smile-o"></i>
-      </div>
-      <span class="record-message">
-        <i class="fa fa-microphone"></i>
+    <div class="chat__message chat__message-from-me">
+      <span class="chat__message-time">
+        15:31
+      </span>
+      <span class="chat__message-body">
+        4시쯤 도착할 거 같아요.
       </span>
     </div>
-
+    <div class="chat__message chat__message-to-me">
+      <img src="images/마이클.jpg" class="chat__message-michael">
+      <div class="chat__message-center">
+        <h3 class="chat__message-friendsname">엄마</h3>
+        <span class="chat__message-body">알겠어~♥</span>
+      </div>
+      <span class="chat__message-time">15:33</span>
+    </div>
   </main>
+  <div class="type__message">
+    <i class="fa fa-plus fa-lg"></i>
+    <div class="type__message-input">
+      <input type="text">
+      <i class="fa fa-smile-o"></i>
+      <span class="record-message">
+        <i class="fa fa-microphone fa-lg"></i>
+      </span>
+    </div>
+  </div>
 
 </body>
 </html>
